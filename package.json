@@ -1,7 +1,7 @@
 {
   "name": "unplugin-embed",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "access": "public",
   "packageManager": "pnpm@9.9.0",
   "description": "embeds any file as a base64 string into the source code",
