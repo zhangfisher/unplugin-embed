@@ -1,7 +1,8 @@
 {
   "name": "unplugin-embed",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "access": "public",
   "packageManager": "pnpm@9.9.0",
   "description": "embeds any file as a base64 string into the source code",
   "author": "ZhangFisher",
@@ -91,9 +92,10 @@
     "lint": "eslint .",
     "play": "npm -C playground run dev",
     "prepublishOnly": "npm run build",
-    "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
-    "test": "vitest"
+    "test": "vitest",
+    "changeset": "changeset",
+    "release": "changeset version && changeset publish"
   },
   "peerDependencies": {
     "@farmfe/core": ">=1",
@@ -132,6 +134,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.0.0",
+    "@changesets/cli": "^2.27.11",
     "@nuxt/kit": "^3.13.0",
     "@nuxt/schema": "^3.13.0",
     "@types/node": "^22.5.1",
