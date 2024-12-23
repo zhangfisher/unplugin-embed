@@ -1,0 +1,5 @@
+---
+"unplugin-embed": patch
+---
+
+init
