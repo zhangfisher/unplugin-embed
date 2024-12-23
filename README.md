@@ -21,10 +21,10 @@ import Embed from 'unplugin-embed/vite'
 
 export default defineConfig({
   plugins: [
-    Embed({ /* options */ }),
+    Embed(),
   ],
 })
-``` 
+```
 
 <br></details>
 
@@ -37,13 +37,12 @@ import Embed from 'unplugin-embed/rollup'
 
 export default {
   plugins: [
-    Embed({ /* options */ }),
+    Embed(),
   ],
 }
 ```
 
 <br></details>
-
 
 <details>
 <summary>Webpack</summary><br>
@@ -53,13 +52,12 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-embed/webpack').default({ /* options */ }),
+    require('unplugin-embed/webpack').default(),
   ],
 }
 ```
 
 <br></details>
-
 
 <details>
 <summary>Rspack </summary><br>
@@ -69,7 +67,7 @@ module.exports = {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-embed/rspack').default({ /* options */ }),
+    require('unplugin-embed/rspack').default(),
   ],
 }
 ```
@@ -84,7 +82,7 @@ module.exports = {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-embed/webpack').default({ /* options */ }),
+    require('unplugin-embed/webpack').default(),
   ],
 }
 ```
@@ -98,7 +96,7 @@ import Embed from 'unplugin-embed/webpack'
 export default {
   configureWebpack: {
     plugins: [
-      Embed({ /* options */ }),
+      Embed(),
     ],
   },
 }
@@ -127,7 +125,6 @@ build({
 <br></details>
 <details>
 
-
 <summary>astro</summary><br>
 
 ```ts
@@ -144,15 +141,13 @@ export default defineConfig({
 ```
 
 <br></details>
- 
-
 
 ## Usage
 
 - **use `?embed` to embed the file as a base64 string**
 
 ```ts
-import fontData from "./font.ttf?embed"
+import fontData from './font.ttf?embed'
 // fontData is a base64 string
 ```
 
@@ -161,16 +156,15 @@ import fontData from "./font.ttf?embed"
 ```ts
 // vite.config.ts
 
+// src/index.ts
+import fontData from './font.ttf'
+
 export default defineConfig({
   plugins: [
     Embed({
-      filter:(id: string) => id.endsWith('.ttf')
+      filter: (id: string) => id.endsWith('.ttf')
     }),
   ],
 })
-
-// src/index.ts
-import fontData from "./font.ttf"
 // fontData is a base64 string
-
 ```

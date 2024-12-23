@@ -9,5 +9,6 @@ export default <Options>{
   dts: true,
   cjsInterop: true,
   splitting: true,
+  sourcemap: true,
   onSuccess: 'npm run build:fix',
 }
