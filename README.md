@@ -115,9 +115,7 @@ import Embed from 'unplugin-embed/esbuild'
 build({
   /* ... */
   plugins: [
-    Embed({
-      /* options */
-    }),
+    Embed(),
   ],
 })
 ```
@@ -129,13 +127,11 @@ build({
 
 ```ts
 // astro.config.mjs
-import AutoImport from 'unplugin-auto-import/astro'
+import Embed from 'unplugin-embed/astro'
 
 export default defineConfig({
   integrations: [
-    AutoImport({
-      /* options */
-    })
+    Embed()
   ],
 })
 ```
