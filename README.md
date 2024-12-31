@@ -164,3 +164,8 @@ export default defineConfig({
 })
 // fontData is a base64 string
 ```
+## Explain
+
+Differences from other `raw/embed` plugins:
+-Using `base64` encoding instead of `JSON.stringify`
+- `unplugin-embed` can encode any file, including `binary` files.
