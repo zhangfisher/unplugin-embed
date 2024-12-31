@@ -167,5 +167,6 @@ export default defineConfig({
 ## Explain
 
 Differences from other `raw/embed` plugins:
--Using `base64` encoding instead of `JSON.stringify`
+
+- Using `base64` encoding instead of `JSON.stringify`
 - `unplugin-embed` can encode any file, including `binary` files.
